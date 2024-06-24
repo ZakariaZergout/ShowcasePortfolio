@@ -1,0 +1,185 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: transparent; /* Make background completely transparent */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 150px; /* Increase spacing between items */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s; /* Smooth transition for link colors */
+}
+
+header nav ul li a:hover {
+    color: #00bfff; 
+}
+
+#falling-image-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    pointer-events: none; 
+}
+
+#falling-image {
+    width: 300px;
+    height: auto;
+}
+
+.scroll-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content by default */
+    text-align: center;
+    color: #fff; 
+    position: relative;
+}
+
+#section1 {
+    background-image: url('Images/BackgroundUpside.jpg'); /* Set the background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center; /* Center items */
+    width: 100%;
+}
+
+.scrolling-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-item {
+    font-size: 3vw; /* Make the text smaller */
+    margin: 10px 0; /* Reduce space between text items */
+    opacity: 0;
+    position: relative;
+}
+
+.text-item.left {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.text-item.right {
+    align-self: flex-end;
+    text-align: right;
+}
+
+#section2 .content {
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+
+#section2 .about-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 20px; /* Add padding to the container */
+}
+
+#section2 .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-right: 250px; /* Add space between text and image */
+}
+
+#section2 .about-image {
+    width: 25%; /* Resize the image */
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 100%;
+    font-size: 1.5vw;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-text {
+    font-size: 3vw; 
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.overlay-text {
+    font-size: 3vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    white-space: nowrap;
+}
+
+/* Styles for Section 3 "MY projects" */
+#section3 {
+    background-color: #000; /* Background color for section 3 */
+}
+
+.projects-link {
+    text-decoration: none; 
+}
+
+.projects-text {
+    font-size: 8vw; 
+    color: #fff; 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+}
+
+.projects-link:link, .projects-link:visited, .projects-link:hover, .projects-link:active {
+    color: #fff; 
+}
